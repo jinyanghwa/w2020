@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true});
+		});
+	</script>
+	<style>
+	body{background-image:url(../images/bg_grid.gif);}
+	.boxWrap{width: 410px;_height: 210px;background-color:skyblue;}
+	.boxWrap .box1,
+		.boxWrap .box2{
+			width: 200px;height: 200px;color:white;
+			float: left;
+	}
+	.boxWrap .box1{background-color:red;}
+	.boxWrap .box2{background-color:blue;}
+	.box3{height: 200px;background-color:pink;}
+	.boxWrap .clear{height: 10px;clear:both;}
+
+	.clearfix:after{content:"";clear: both;display: block;}
+	.box3:after{content:"입니다.";display: block;}
+	.box3:before{content:"핑크는 ";display: block;}
+	</style>
+</head>
+<body>
+	<div class="boxWrap clearfix">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+	<div class="box3">box3</div>
+<style>
+	.pink{background-color:pink;}
+	.skyblue{background-color:skyblue;}
+	.indigo{background-color:indigo;}
+	.red{background-color:red;}      /*원하는 색을 클래스명에 적어 적용시킬 수 있다.*/
+	.wrap1{width: 1000px;margin:10px auto;}
+	.wrap1 .left,.wrap1 .right{width: 100px;height: 100px;}
+	.wrap1 .left{float:left;}
+	.wrap1 .right{float:right;}
+</style>
+	<h3>1.float</h3>
+	<div class="wrap1 pink clearfix">
+		<div class="left red">left</div>
+		<div class="right indigo">right</div>
+	</div>
+
+	<style>
+		.wrap2{width: 1000px;margin:0 auto;}
+		.wrap2 li{float:left;width: 20%;}
+		.wrap2 li>a{display:block;text-align:center;line-height:30px;}
+		.wrap2 li>a:hover{background-color: blue; color:white;}
+	</style>
+	<h3>2.float nav</h3>
+	<div class="wrap2 red">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+	
+	<style>
+		.wrap3{width: 1000px;margin:0 auto;}
+		.wrap3 h3{text-align:center;}
+		.wrap3 li{float:left;width: 20%;}
+		.wrap3 li>a{display:block;text-align:center;line-height:30px;}
+		.wrap3 li>a:hover{background-color:orange; color:white;}
+	</style>
+	<h3>3.header</h3>
+	<div class="wrap3 pink">
+		<h3>logo</h3>
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+
+	<style>
+		.wrap4{width: 1000px;margin:0 auto;}
+		.wrap4 h3{text-align:center;}
+		.wrap4 li{float:left;width: 20%;margin-top:10px;}
+		.wrap4 li>a{display:block;text-align:center;line-height:30px;}
+		.wrap4 li>a:hover{background-color:orange; color:white;}
+		/*slider*/
+		.sliderWrap{width: 1200px;margin:0 auto; margin-top:30px;}
+		.slider img{width: 100%;}
+		/*aside conetent*/
+		.wrap4one{width: 1000px; background-color:pink;margin:0 auto;}
+		.wrap4one .aside{width: 350px;height: 350px; float:left;background-color:indigo;
+			margin-left:25px;margin-top:25px;margin-bottom:25px;}
+		.wrap4one .content{width: 570px;height: 350px; float:right;background-color:blue;
+			margin: ;margin-right:25px;margin-top:25px;margin-bottom:25px;}
+		/*footer*/
+		.footer{width:1000px;margin:0 auto; height: 100px;background-color: gray;margin-top:10px;}
+	</style>
+	<h3>4.float mainpage layout</h3>
+	<div class="wrap4 skyblue">
+		<h3>logo</h3>
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+	<div class="sliderWrap">
+		<ul class="slider">
+			<li><img src="images/img01.jpg" alt=""></li>
+			<li><img src="images/img02.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div class="wrap4one pink clearfix">
+		<div class="aside">aside</div>
+		<div class="content">content</div>
+	</div>
+	<div class="footer">footer</div>
+</body>
+</html>
